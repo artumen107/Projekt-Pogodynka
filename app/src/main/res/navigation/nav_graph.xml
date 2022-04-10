@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainPage">
+
+    <fragment
+        android:id="@+id/mainPage"
+        android:name="com.example.pogodynka.Fragments.mainPage"
+        android:label="main_page_fragment"
+        tools:layout="@layout/main_page_fragment" >
+        <action
+            android:id="@+id/action_mainPage_to_weatherPage"
+            app:destination="@id/weatherPage" />
+        <action
+            android:id="@+id/action_mainPage_to_large_weather_page"
+            app:destination="@id/large_weather_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherPage"
+        android:name="com.example.pogodynka.Fragments.weatherPage"
+        android:label="weather_page_fragment"
+        tools:layout="@layout/weather_page_fragment" >
+        <action
+            android:id="@+id/action_weatherPage_to_mainPage"
+            app:destination="@id/mainPage" />
+        <argument
+            android:name="Town"
+            app:argType="string" />
+        <argument
+            android:name="Description"
+            app:argType="string" />
+        <argument
+            android:name="Pressure"
+            app:argType="string" />
+        <argument
+            android:name="Sunrise"
+            app:argType="string" />
+        <argument
+            android:name="Sunset"
+            app:argType="string" />
+        <argument
+            android:name="Temperature"
+            app:argType="string" />
+        <argument
+            android:name="Icon"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/large_weather_page"
+        android:name="com.example.pogodynka.Fragments.large_weather_page"
+        android:label="large_weather_page" >
+        <action
+            android:id="@+id/action_large_weather_page_to_mainPage"
+            app:destination="@id/mainPage" />
+        <argument
+            android:name="Town"
+            app:argType="string" />
+        <argument
+            android:name="Temperature"
+            app:argType="string" />
+        <argument
+            android:name="Description"
+            app:argType="string" />
+        <argument
+            android:name="Sunrise"
+            app:argType="string" />
+        <argument
+            android:name="Sunset"
+            app:argType="string" />
+        <argument
+            android:name="Pressure"
+            app:argType="string" />
+        <argument
+            android:name="Icon"
+            app:argType="string" />
+    </fragment>
+</navigation>

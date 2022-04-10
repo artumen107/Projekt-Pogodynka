@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pogodynka</string>
+    <string name="welcomeText">Witamy w pogodynce!</string>
+    <string name="writeLocation">1. Nazwa miejscowości:</string>
+    <string name="chooseLayout">2. Powiększony interfejs:</string>
+    <string name="cityInside">Miejscowość</string>
+</resources>
